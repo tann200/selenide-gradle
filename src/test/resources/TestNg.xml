@@ -3,7 +3,7 @@
 <suite name="basic selenide tests" verbose="2" parallel="false" thread-count="1" preserve-order="true" >
 
     <listeners>
-        <listener class-name="helpers.CustomListener" />
+        <listener class-name="helpers.TestListener" />
     </listeners>
 
     <test name="First test" preserve-order="true">
@@ -12,7 +12,7 @@
             </dependencies>
         </groups>
         <classes>
-            <class name="TestClass1" />
+            <class name="tests.TestClass1" />
         </classes>
     </test>
 
