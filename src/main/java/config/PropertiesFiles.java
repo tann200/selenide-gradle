@@ -9,7 +9,7 @@ public class PropertiesFiles {
     Properties prop = new Properties();
 
     public Properties loadPropertiesFile(String filePath) {
-        System.out.println("kiiisu" + filePath);
+        System.out.println("Filepath is" + filePath);
 
         try (InputStream resourceAsStream = getClass().getClassLoader().getResourceAsStream(filePath)) {
             prop.load(resourceAsStream);

@@ -19,8 +19,8 @@ public class PageObject1 {
     private final SelenideElement googleSearch = $(By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input"));
 
     @Step("Performing a google search")
-    public void performGoogleSearch(){
-        open("https://www.google.com");
+    public void performSearch(String webUrl){
+        open(webUrl);
         googleSearch.setValue("Searching").pressEnter();
         sleep(3000);
     }

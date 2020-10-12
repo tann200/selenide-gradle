@@ -11,7 +11,7 @@ public class Environment {
 
     private PropertiesFiles prop = new PropertiesFiles();
 
-    private Properties newEnv = prop.loadPropertiesFile("environment.properties");
+    private Properties newEnv = prop.loadPropertiesFile("config.properties");
 
     private String getEnv(String env) {
         return System.getProperty(env);
@@ -30,9 +30,7 @@ public class Environment {
 
     //Other way of handling properties:
 
-    private String getBaseUrlProperty() {return newEnv.getProperty("BASE_URL");
-    }
-    public String getBaseUrl() { return getEnv("API_KEY", getBaseUrlProperty());
+    public String getBaseUrl() {return newEnv.getProperty("BASE_URL");
     }
 
 }

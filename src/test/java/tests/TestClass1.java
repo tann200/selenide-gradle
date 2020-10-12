@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 public class TestClass1 extends TestBase{
 
-    private final PageObject1 pageObject1 = new PageObject1();
+
 
     private final Logger logger = LoggerFactory.getLogger(TestClass1.class);
 
@@ -41,7 +41,7 @@ public class TestClass1 extends TestBase{
 
     @Test
     public void Test1(ITestContext context) {
-        pageObject1.performGoogleSearch();
+        pageObject1.performSearch(webUrl);
         logger.info("This is TestClass1");
 
 
