@@ -7,7 +7,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.*;
-import pages.PageObject1;
+import pages.GoogleSearchPage;
 
 public class TestBase {
 
@@ -15,7 +15,7 @@ public class TestBase {
 
     public Environment env = new Environment();
 
-    public final PageObject1 pageObject1 = new PageObject1();
+    public final GoogleSearchPage pageObject1 = new GoogleSearchPage();
 
     public final String webUrl = env.getBaseUrl();
 

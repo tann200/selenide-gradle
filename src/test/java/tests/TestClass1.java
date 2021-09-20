@@ -1,17 +1,12 @@
 package tests;
 
-import models.DataModel;
 import org.testng.ITestContext;
-import pages.PageObject1;
-import testData.TestData;
-import helpers.DataProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
-
-
+import pages.CubaPetClinicMain;
+import pages.CubaPetClinicLanding;
 
 
 public class TestClass1 extends TestBase{
@@ -20,13 +15,11 @@ public class TestClass1 extends TestBase{
 
     private final Logger logger = LoggerFactory.getLogger(TestClass1.class);
 
-    //Factory for dataproviders
-    private final DataModel dataModel;
-    @Factory(dataProvider = "dataProvider1", dataProviderClass = DataProvider.class)
-    public TestClass1(DataModel dataModel){
-        super();
-        this.dataModel=dataModel;
-    }
+
+
+    private CubaPetClinicLanding cubaPetClinicLanding = new CubaPetClinicLanding();
+    private CubaPetClinicMain cubaPetClinicMain = new CubaPetClinicMain();
+
 
 
 
@@ -39,18 +32,17 @@ public class TestClass1 extends TestBase{
 
 
 
-    @Test
+    @Test(enabled = false)
     public void Test1(ITestContext context) {
-        pageObject1.performSearch(webUrl);
+        pageObject1.performSearch("https://www.google.com", "Selenide");
         logger.info("This is TestClass1");
-
-
     }
 
     @Test
-    public void Test2(ITestContext context) {
-        logger.info("This is Test2");
-        logger.info(context.getAttribute("Attribute1").toString());
+    public void SearchPetClinicDoctor(ITestContext context) {
+
+        cubaPetClinicLanding.logIn("https://demo10.cuba-platform.com/petclinic", "joy", "joy");
+        cubaPetClinicMain.performSearchByOptionAndParameter("Veterinarians","Last name","Oak");
     }
 
 }
