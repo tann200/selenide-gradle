@@ -32,13 +32,13 @@ public class TestClass1 extends TestBase{
 
 
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void Test1(ITestContext context) {
         pageObject1.performSearch("https://www.google.com", "Selenide");
         logger.info("This is TestClass1");
     }
 
-    @Test
+    @Test(testName = "Add veterinarian to petClinic", enabled = false)
     public void SearchPetClinicDoctor(ITestContext context) {
 
         cubaPetClinicLanding.logIn("https://demo10.cuba-platform.com/petclinic", "joy", "joy");

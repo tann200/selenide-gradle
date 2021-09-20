@@ -33,13 +33,15 @@ public class CubaPetClinicMain {
     private final SelenideElement popupButton = $(byClassName("v-popupbutton"));
     private final SelenideElement popupContent = $(byClassName("v-popupbutton-popup"));
     private final SelenideElement filterButtonGroup = $(byClassName("filter-search-button-layout"));
+    private final SelenideElement logoutButton = $(byClassName("c-logout-button"));
 
-    @Step("Logging in to clinic")
+    @Step("Perform a seaarch by paraameters and log out")
     public void performSearchByOptionAndParameter(String searchOption, String filterParameter, String searchParameter){
         selectMasterDataOptions(searchOption);
         setAddSearchCondition(filterParameter);
         searchWithOption(searchOption);
         clearSearchParameters();
+        logOut();
     }
 
     private void selectMasterDataOptions(String optionValue) {
@@ -67,6 +69,10 @@ public class CubaPetClinicMain {
         filterButtonGroup.findElement(By.className("v-popupbutton")).click();
         popupContent.should(exist).findElement(By.className("v-csslayout-c-popupbutton-container")).click();
         addSearchCondition.should(disappear);
+    }
+
+    private void logOut() {
+        logoutButton.click();
     }
 
 }

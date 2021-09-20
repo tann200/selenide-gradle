@@ -38,7 +38,7 @@ public class CubaPetClinicLanding {
 
     private void enterCredentials(String username,String password) {
         PageUtilities.clearFieldAndSetValue(usernameField,username);
-        PageUtilities.clearFieldAndSetValue(usernameField,password);
+        PageUtilities.clearFieldAndSetValue(passWordField,password);
         loginButton.click();
     }
 }
