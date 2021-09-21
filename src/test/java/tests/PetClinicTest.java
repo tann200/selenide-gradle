@@ -1,19 +1,19 @@
 package tests;
 
-import org.testng.ITestContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.ITestContext;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.CubaPetClinicMain;
 import pages.CubaPetClinicLanding;
+import pages.CubaPetClinicMain;
 
 
-public class TestClass1 extends TestBase{
+public class PetClinicTest extends TestBase{
 
 
 
-    private final Logger logger = LoggerFactory.getLogger(TestClass1.class);
+    private final Logger logger = LoggerFactory.getLogger(PetClinicTest.class);
 
 
 
@@ -30,15 +30,7 @@ public class TestClass1 extends TestBase{
     }
 
 
-
-
-    @Test(enabled = true)
-    public void Test1(ITestContext context) {
-        pageObject1.performSearch("https://www.google.com", "Selenide");
-        logger.info("This is TestClass1");
-    }
-
-    @Test(testName = "Add veterinarian to petClinic", enabled = false)
+    @Test(testName = "Add veterinarian to petClinic", enabled = true)
     public void SearchPetClinicDoctor(ITestContext context) {
 
         cubaPetClinicLanding.logIn("https://demo10.cuba-platform.com/petclinic", "joy", "joy");

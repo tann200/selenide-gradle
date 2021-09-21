@@ -39,7 +39,7 @@ public class CubaPetClinicMain {
     public void performSearchByOptionAndParameter(String searchOption, String filterParameter, String searchParameter){
         selectMasterDataOptions(searchOption);
         setAddSearchCondition(filterParameter);
-        searchWithOption(searchOption);
+        searchWithOption(searchParameter);
         clearSearchParameters();
         logOut();
     }
@@ -68,7 +68,7 @@ public class CubaPetClinicMain {
     private void clearSearchParameters() {
         filterButtonGroup.findElement(By.className("v-popupbutton")).click();
         popupContent.should(exist).findElement(By.className("v-csslayout-c-popupbutton-container")).click();
-        addSearchCondition.should(disappear);
+        searchParameterField.should(disappear);
     }
 
     private void logOut() {
