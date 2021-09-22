@@ -1,0 +1,12 @@
+.idea
+.gradle
+gradle/
+build/
+gradlew
+gradlew.bat
+gradle.bat
+out
+src/main/resources/default.properties
+src/main/resources/config.properties
+
+gradle.properties
