@@ -15,15 +15,15 @@ import org.slf4j.LoggerFactory;
 
 import static io.restassured.RestAssured.given;
 
-public class basicRestAssuredClient {
-    private final Logger logger = LoggerFactory.getLogger(basicRestAssuredClient.class);
+public class BasicRestAssuredClient {
+    private final Logger logger = LoggerFactory.getLogger(BasicRestAssuredClient.class);
 
     private void logCallResponseTime(String endpoint, Response response) {
         logger.info("Response time {} {} ms", endpoint, response.getTime());
     }
 
 
-    public basicRestAssuredClient(){
+    public BasicRestAssuredClient(){
 
     }
 
