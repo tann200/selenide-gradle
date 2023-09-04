@@ -3,12 +3,21 @@ package config;
 import lombok.Getter;
 import lombok.Setter;
 
-public class ConfigProperties {
+@Getter
+public class ApplicationProperties {
+    private final ServiceProperties service = new ServiceProperties();
+
     @Getter
     @Setter
     public static class ServiceProperties {
 
-        private final Service baseUrl = new Service();
+
+        private final Service baseService = new Service();
+    }
+    @Getter
+    public static class Service {
+
+        private String uri;
     }
 }
-}
+

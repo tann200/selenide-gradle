@@ -1,43 +1,6 @@
 spring:
-  datasource:
-    url: 'jdbc:postgresql://credit-card-test-pg.db.big.local/cardapi'
-    username: 'appadmin'
-    password: '9ZXOASfPWbMKp9qg'
-  jpa:
-    properties:
-      hibernate:
-        default_schema: cardapi
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-
-application:
-  auth:
-    username: 'banksystem.testing'
-    password: 'a9MK33QVZcyopFsPA*Tt'
   service:
-    auth-service-api:
-      uri: 'https://auth-service-central-test.dca.origin.big.local'
-    card-api:
-      uri: 'https://card-api-credit-card-test.dca.origin.big.local'
-    crm-api:
-      uri: 'https://crm-bbo-test.dca.origin.big.local'
-    cas-api:
-      uri: 'https://customer-activities-service-customer-central-services-staging.dca.origin.big.local'
-    loan-api:
-      uri: 'https://loan-bbo-test.dca.origin.big.local'
-    bo-api:
-      uri: 'https://backoffice-bbo-test.dca.origin.big.local'
+    test-service:
+      uri: 'https://www.google.com'
 
-  test-customer:
-    customer-id: '766653'
-    virtual-card:
-      card-pan: '4402390000196106'
-      card-id: 4851
-      customer-id: '766653'
-    physical-card:
-      card-pan: '4402390000153867'
-      card-id: 4850
-      customer-id: '766653'
-    physical-card-for-blocking:
-      card-pan: '4402390000723545'
-      card-id: 4852
-      customer-id: '766653'
+
