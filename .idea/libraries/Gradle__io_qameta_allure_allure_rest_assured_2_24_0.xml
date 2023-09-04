@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.qameta.allure:allure-rest-assured:2.24.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-rest-assured/2.24.0/5842f52ebda5877a1663842ae3bc5c5ad8d4e70f/allure-rest-assured-2.24.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-rest-assured/2.24.0/8de8a2ee7fda559baa969e5e04924588e753fc6b/allure-rest-assured-2.24.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

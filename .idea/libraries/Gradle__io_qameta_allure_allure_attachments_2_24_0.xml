@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.qameta.allure:allure-attachments:2.24.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-attachments/2.24.0/144903f6ce59e28f706f38f4daa9f3b73865c23e/allure-attachments-2.24.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.qameta.allure/allure-attachments/2.24.0/8e3840111141eed4df1473ea19903e3499226350/allure-attachments-2.24.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
