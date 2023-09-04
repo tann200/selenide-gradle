@@ -1,23 +1,28 @@
 package config;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@Getter
+@Data
+@ConfigurationProperties(prefix = "application")
 public class ApplicationProperties {
+
     private final ServiceProperties service = new ServiceProperties();
 
     @Getter
     @Setter
     public static class ServiceProperties {
 
-
         private final Service baseService = new Service();
-    }
-    @Getter
-    public static class Service {
 
-        private String uri;
+        @Getter
+        @Setter
+        public static class Service {
+
+            private String uri;
+        }
     }
 }
 

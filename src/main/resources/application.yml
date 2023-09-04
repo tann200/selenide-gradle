@@ -1,6 +1,7 @@
 spring:
+application:
   service:
-    test-service:
+    baseService:
       uri: 'https://www.google.com'
 
 
